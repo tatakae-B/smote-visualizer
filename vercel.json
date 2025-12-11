@@ -4,8 +4,7 @@
   "buildCommand": "npm run build",
   "functions": {
     "api/ssr.ts": {
-      "includeFiles": "dist/**",
-      "runtime": "nodejs18.x"
+      "includeFiles": "dist/**"
     }
   },
   "rewrites": [
