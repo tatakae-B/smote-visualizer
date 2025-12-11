@@ -1,3 +1,34 @@
+## SMOTE Visualizer
+
+Interactive React + Vike app that demonstrates how SMOTE (Synthetic Minority Oversampling Technique) balances an imbalanced binary dataset. The page shows the original dataset side-by-side with a SMOTE-balanced version and lets you tune parameters to see the impact.
+
+### Features
+- Adjustable SMOTE neighbors (`k`) and target minority/majority ratio
+- Live stats for original vs balanced class counts and number of synthetic points generated
+- SVG scatter plots highlighting majority, original minority, and synthetic minority samples
+- Lightweight, client-only implementation of SMOTE for educational purposes
+
+### Tech stack
+- React + Vike (Vite) with TypeScript
+- Simple in-browser SMOTE implementation (no backend)
+- CSS for layout and visualization styling
+
+### Running locally
+```bash
+npm install
+npm run dev
+```
+Then open the URL shown in the terminal (typically `http://localhost:5173`).
+
+### How SMOTE is implemented (simplified)
+1) Separate majority and minority samples from a small toy dataset.  
+2) Compute k nearest minority neighbors for each minority point.  
+3) Generate synthetic samples along the line segment between a minority point and one of its nearest neighbors using a random gap `0..1`.  
+4) Repeat until the target minority count is reached; merge with original data for visualization.
+
+### Notes and limitations
+- Uses a fixed 2D toy dataset for clarity; randomness means each refresh may place synthetic points slightly differently.
+- Intended for intuition-building only; not a production-ready ML pipeline.
 Generated with [vike.dev/new](https://vike.dev/new) ([version 544](https://www.npmjs.com/package/create-vike/v/0.0.544)) using this command:
 
 ```sh

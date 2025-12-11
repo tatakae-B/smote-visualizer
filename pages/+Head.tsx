@@ -1,7 +1,13 @@
 // https://vike.dev/Head
 
-import logoUrl from "../assets/logo.svg";
-
 export function Head() {
-  return <link rel="icon" href={logoUrl} />;
+  return (
+    <>
+      <title>SMOTE Visualizer</title>
+      <meta
+        name="description"
+        content="Interactive demo comparing imbalanced data to SMOTE-balanced samples."
+      />
+    </>
+  );
 }
