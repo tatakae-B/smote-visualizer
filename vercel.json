@@ -1,6 +1,12 @@
 {
   "installCommand": "npm install",
   "buildCommand": "npm run build",
+  "functions": {
+    "api/ssr.ts": {
+      "includeFiles": "dist/**",
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/assets/(.*)",
