@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             Compare an imbalanced dataset with a SMOTE-balanced version, see
             how synthetic samples are generated, and tune the parameters.
           </p>
-        </div>
+    </div>
       </header>
       <main id="page-content">{children}</main>
       <footer className="app-footer">
