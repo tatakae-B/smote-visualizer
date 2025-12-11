@@ -5,7 +5,7 @@
   "functions": {
     "api/ssr.ts": {
       "includeFiles": "dist/**",
-      "runtime": "nodejs22.x"
+      "runtime": "nodejs18.x"
     }
   },
   "rewrites": [
