@@ -16,9 +16,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     res.status(httpResponse.statusCode);
-    httpResponse.headers?.forEach(([name, value]) => {
+    (httpResponse.headers as Array<[string, string]> | undefined)?.forEach(
+      ([name, value]: [string, string]) => {
       res.setHeader(name, value);
-    });
+      },
+    );
     res.send(httpResponse.body);
   } catch (err) {
     console.error("SSR handler error", err);
